@@ -278,8 +278,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     
         if (score >= 5 && timeLeft > 0) {
-            const completedLevels = JSON.parse(localStorage.getItem('completedLevels')) || [false, false];
-            completedLevels[1] = true;
+            const completedLevels = JSON.parse(localStorage.getItem('completedLevels')) || [false, false, false];
+            completedLevels[2] = true;
             localStorage.setItem('completedLevels', JSON.stringify(completedLevels));
     
             gameArea.innerHTML = `<p>Поздравляем! Игра завершена.</p>`;

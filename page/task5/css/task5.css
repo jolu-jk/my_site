@@ -1,164 +1,102 @@
-body {
-    background: linear-gradient(135deg, #e8f1f5, #956a71);
-    height: auto;
+
+.task-description ul {
+  color: #444;
+    text-align: left;
+    padding-left: 100px;
 }
 
-h1 {
-    font-size: 2em;
-    color: #502c35;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+#game-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.css-pic {
+.piece {
+    width: 150px;
+    height: 150px;
+    cursor: grab;
+    transition: transform 0.3s ease;
+}
+
+.piece:active {
+    cursor: grabbing;
+}
+
+#target-area {
+    width: 700px;
+    height: 500px;
+    border: 2px dotted #df922e;
+    border-radius: 10px;
+    display: flex;
     position: relative;
-    width: 200px;
-    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.css-pic .table::before {
-    content: '';
+#target-area p {
+    color: #aaa;
+    font-size: 18px;
     position: absolute;
-    bottom: 40px;     
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%, -50%);
-    width: 130px;          
-    height: 200px; 
 }
 
-.css-pic .table-top::after {
-    content: '';
-    position: absolute;
-    bottom: 40px;     
-    top: 50%;
-    left: 5xp;
-    transform: translateX(-50%), rotate(30deg);
-    width: 40px;          
-    height: 100px; 
-    z-index: -1;
+#completion-message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: green;
+    text-align: center;
+    display: none;
+}
+
+@keyframes success {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+        filter: brightness(1) blur(0);
+    }
+
+    25% {
+        transform: rotate(5deg);
+        opacity: 0.9;
+        filter: brightness(1.1) blur(1px);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+        opacity: 0.8;
+        filter: brightness(1.2) blur(2px);
+    }
+
+    75% {
+        transform: rotate(5deg);
+        opacity: 0.9;
+        filter: brightness(1.1) blur(1px);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+        filter: brightness(1) blur(0);
+    }
 }
 
 
-.css-pic::after {
-    content: '';
-    position: absolute;
-    width: 40px;
+#puzzle-container.success {
+    animation: success 1.5s ease-in-out;
+}
+
+#target-area.success-animation {
+    animation: success 1s ease-in-out;
+}
+@media (max-width: 768px) {
+  .piece {
+    width: 100px;
     height: 100px;
-    background: radial-gradient(circle at 50% 65%, #f8fcfc 5%, #157a8f 70%);
-    border-radius: 50%;
-    top: 60%;
-    left: 5px;
-    transform: translateY(-50%) rotate(30deg);
-    z-index: -1;
-}
+  }
 
-
-
-/* СТОЛЕШНИЦА */
-.table-top {
-  position: absolute;
-  top: 40px;
-  left: 0;
-
-  width: 200px;          /* ⬅ БОЛЬШЕ */
-  height: 26px;
-  background: #d27430;
-  z-index: 3;
-}
-
-/* СТОЯЧИЙ ОВАЛ — НОЖКА */
-.table-middle {
-  position: absolute;
-  top: 58px;             /* ⬅ ЗАХОДИТ ПОД столешницу */
-  left: 50%;
-  transform: translateX(-50%);
-
-  width: 36px;
-  height: 70px;          /* ⬅ ВЫШЕ */
-  background: #d27430;
-  border-radius: 50%;
-  z-index: 2;
-}
-
-/* ПЕРЕВЁРНУТАЯ ТРАПЕЦИЯ */
-.table-base {
-  position: absolute;
-  top: 108px;            /* ⬅ ЗАХОДИТ ПОД овал */
-  left: 50%;
-  transform: translateX(-50%);
-
-  width: 80px;           /* ⬅ ШИРЕ */
-  height: 48px;
-  background: #d27430;
-
-  clip-path: polygon(
-    40% 0,
-    60% 0,
-    100% 100%,
-    0 100%
-  );
-
-  z-index: 1;
-}
-
-
-
-.left-chair {
-  position: absolute;
-  bottom: 0;
-  left: 0;   
-  
-}
-
-.right-chair {
-  position: absolute;
-  bottom: 0;
-  right: 0;       
-  transform: scaleX(-1);
-}
-
-.chair-back {
-  width: 120px;
-  height: 180px;
-  border-radius: 50%;
-  border-right: 15px solid #d27430;
-  position: absolute;
-  bottom: 0px;
-  right: 65px;
-}
-
-.chair-seat {
-  width: 80px;         
-  height: 20px;
-  background: #d27430;
-
-  position: absolute;
-  bottom: 80px;         
-  right: -10px; 
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 2;
-  border-radius: 0;
-}
-
-
-.chair-leg {
-  z-index: 1;
-  width: 15px;
-  height: 80px;
-  background: #d27430;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-}
-
-.dot {
-  width: 15px;
-  height: 10px;
-  background: #823a0a;
-  border-radius: 50%;
-  margin-left: 10px;
-  margin-right: 10px;
+   #target-area {
+        width: 90%;
+        height: 300px;
+    }
 }

@@ -6,7 +6,6 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Общие стили */
 html,
 body {
   height: auto;
@@ -22,18 +21,17 @@ h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/*отступы между строк*/
+/*отступы между абзацами*/
 p {
   margin-top: 7px;
 }
 
-/* Контейнер */
+/* разлепляет лого и меню бургер */
 .container {
   margin: 0 auto;
   padding: 0 16px;
 }
 
-/* HEADER */
 .header {
   padding: 20px 40px;
   background-color: #ffffff;
@@ -51,15 +49,12 @@ p {
   height: 70px;
 }
 
-/* ЛОГОТИП (ТОЛЬКО CSS) */
+/* Логотип */
 .logo {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-
-/* CSS-ЛОГОТИП: МОНОГРАММА А + Я */
-
 
 .logo-mark {
   border-radius: 6px;
@@ -100,7 +95,7 @@ p {
   letter-spacing: 0.4px;
 }
 
-
+/*Меню бургер*/
 .burger-menu {
   position: relative;
 }
@@ -172,12 +167,13 @@ p {
   display: flex;
 }
 
+/*Сайт и группа*/
 .hero-section {
   padding: 100px 20px;
   text-align: center;
   background: linear-gradient(135deg, #e8d8d8, #502c35);
   color: #502c35;
-  margin-top: 80px;
+  margin-top: 80px; /*чтобы контент не залез под fixed header.*/
 }
 
 .hero-section h1 {
@@ -190,6 +186,7 @@ p {
   font-size: 1.2em;
 }
 
+/*Обо мне*/
 .about-section {
   display: flex;
   justify-content: center;
@@ -231,7 +228,6 @@ p {
   max-width: 700px;
 }
 
-/*обо мне*/
 .about-text h2 {
   font-size: 2em;
   color: #502c35;
@@ -273,6 +269,7 @@ p {
   color: #4a0b67;
 }
 
+/*задания*/
 .task-preview {
   padding: 60px 20px;
   text-align: center;
@@ -286,7 +283,7 @@ p {
 
 .task-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /*2 колонки, в маленьком экране 1*/
   gap: 30px;
   padding: 0 30px;
 }
@@ -298,7 +295,7 @@ p {
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
+/*для движения карточек*/
 .task-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
@@ -331,6 +328,7 @@ p {
   background-color: #4a0b67;
 }
 
+/*Курсовая работа*/
 .course-project {
   margin-top: 80px;
   padding: 30px 20px;
@@ -374,6 +372,8 @@ p {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
+
+/*для организации заданий на отдельных блоках*/
 .task-description,
 .task-implementation {
   margin: 20px auto;
@@ -404,7 +404,7 @@ p {
   transform: translate(0, 0);
 }
 
-
+/*Футер*/
 footer {
   padding: 32px;
   text-align: center;
@@ -421,117 +421,8 @@ footer {
   opacity: 0.8;
 }
 
-
-@media screen and (max-width: 1200px) {
-
-  .task-description,
-  .task-implementation {
-    padding: 15px;
-    max-width: 90%;
-  }
-
-  .about-content {
-    gap: 20px;
-    flex-direction: column;
-  }
-
-  .about-content img {
-    width: 150px;
-    height: 150px;
-  }
-
+@media (max-width: 768px) {
+  .task-grid { grid-template-columns: 1fr; }
+  .about-content { flex-direction: column; gap: 20px; }
+  .about-content img { width: 150px; height: 150px; }
 }
-
-@media screen and (max-width: 768px) {
-  header {
-    padding: 20px 20px;
-    text-align: right;
-  }
-
-
-  .hero-section h1 {
-    font-size: 2.5em;
-  }
-
-  .about-section {
-    padding: 60px 20px;
-  }
-
-  .task-preview h2 {
-    font-size: 2em;
-  }
-
-  .task-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .task-card h3 {
-    font-size: 1.2em;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-
-}
-
-@media screen and (max-width: 480px) {
-  .about-section {
-    padding: 40px 15px;
-  }
-
-  .about-content {
-    gap: 15px;
-    padding: 20px;
-    max-width: 100%;
-    margin: 0 15px;
-  }
-
-  .about-content img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .about-text h2 {
-    font-size: 1.4em;
-  }
-
-  .about-list li {
-    font-size: 0.9em;
-  }
-
-  .about-list strong {
-    margin-right: 5px;
-  }
-
-  .about-content a {
-    font-size: 1em;
-  }
-
-  .hero-section h1 {
-    font-size: 2em;
-  }
-
-  .task-card h3 {
-    font-size: 1.1em;
-  }
-
-  .task-preview h2 {
-    font-size: 1.8em;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .task-card .button {
-    padding: 8px 16px;
-  }
-
-
-
-}
-
-

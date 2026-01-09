@@ -11,26 +11,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const level1Button = document.getElementById('level1-button');
     const level2Button = document.getElementById('level2-button');
     const level3Button = document.getElementById('level3-button');
-    const unlockAllButton = document.getElementById('unlock-all-button'); // Кнопка для разблокировки всех уровней
+    const unlockAllButton = document.getElementById('unlock-all-button'); 
     let completedLevels = JSON.parse(localStorage.getItem('completedLevels')) || [false, false, false];
 
     function updateLevelButtons() {
-        // Разблокировка уровней
+        
         if (completedLevels[0]) {
             level2Button.classList.remove('locked');
-            level2Button.querySelector('span')?.remove(); // Убираем иконку 🔒
+            level2Button.querySelector('span')?.remove(); 
         }
         if (completedLevels[1]) {
             level3Button.classList.remove('locked');
-            level3Button.querySelector('span')?.remove(); // Убираем иконку 🔒
-        }
-        if (completedLevels[2]) {
-            level3Button.classList.remove('locked');
-            level3Button.querySelector('span')?.remove(); // Убираем иконку 🔒
+            level3Button.querySelector('span')?.remove(); 
         }
     }
 
-    // Обработчики для кнопок уровней
+
     level1Button.addEventListener('click', () => {
         window.location.href = '../page/level/level1.html';
     });

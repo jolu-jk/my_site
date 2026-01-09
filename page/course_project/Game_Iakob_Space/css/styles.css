@@ -13,13 +13,11 @@ body {
     flex-direction: column;
     background: linear-gradient(135deg, #e8f1f5, #956a71);
     scroll-behavior: smooth;
-    height: 100%;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     background-color: #f5f8fa;
     color: #4d4e4e;
-    scroll-behavior: smooth;
 }
 
 h1 {
@@ -68,17 +66,6 @@ nav a:hover {
 .container {
   margin: 0 ;
   padding: 16px;
-}
-
-/* HEADER */
-.header {
-  padding: 20px 40px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
 }
 
 .header .container {

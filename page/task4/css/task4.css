@@ -3,7 +3,6 @@ table {
     max-width: 600px;
     width: 90%;
     margin: auto;
-    text-align: center;
     table-layout: fixed;
     border-collapse: collapse;
     margin-bottom: 15px;

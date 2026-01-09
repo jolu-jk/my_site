@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Задание 5. Перетаскивание объектов</title>
   <link rel="stylesheet" href="../../css/style.css">
-  <link rel="stylesheet" href="css/pic.css">
+  <link rel="stylesheet" href="css/task5.css">
 </head>
 <body>
   <header class="header">
-     <a href="../../index.html" class="logo"></a>
     <div class="container">
     <div class="logo">
          <a href="../../index.html" class="logo-mark">
@@ -32,74 +31,56 @@
             </ul>
     </nav>
     </header>
+    </div>
 
   <main id="content" style="margin-top: 150px;margin-bottom: 40px; text-align: center;">
     <h1>Задание 5. Перетаскивание объектов</h1>
 
     <section class="task-description">
         <h2>Описание задания</h2>
-        <p>Необходимо создать рисунок с помощью стилевой таблицы <strong>pic.css</strong>.</p>
-        <p>Размер рисунка должен быть <strong>200x200px</strong>.</p>
-        <p><strong>Вариант 3:</strong></p>
-        <img src="../../assets/pic.png" alt="Пример рисунка задания" style="max-width: 200px; margin: 20px auto;">
+       <p>Целью данного задания является создание механизма перетаскивания объектов на веб-странице.  
+        <br />
+        Задача состоит в сборке целостного дома из нескольких элементов:</p>
+            <ul>
+                <li>Количество собираемых элементов: не менее 4.</li>
+                <li>Каждый элемент должен быть повёрнут.</li>
+                <li>Реализовать возможность поворота элементов.</li>
+                <li>При правильной сборке рисунка пользователь должен увидеть анимацию.</li>
+            </ul>
+            <p>Готовая картинка может располагаться в любом месте контента.</p>
+            <p><strong>Вариант 1. Собрать дом.</strong></p>
+        <p><strong></strong></p>
+        <img src="../task5/image/дом.jpg" alt="Пример рисунка задания" style="max-width: 200px; margin: 20px auto;">
     </section>
 
-    <section class="task-implementation">
-        <h2>Реализация</h2>
-        <p>Ниже представлен созданный рисунок с использованием CSS.</p>
+        <section class="task-implementation">
+            <h2>Реализация</h2>
+            <p>Ниже представлен процесс реализации задания</p>
+            <p>Для взаимодействия с элементами используйте мышь.</p>
 
-        <div class="drawing-container">
-            <div class="css-pic">
-                <div class="table">
-                    <div class="table-top"></div>
-                    <div class="table-middle"></div>
-                    <div class="table-base"></div>
-                </div>
-
-                <div class="right-chair">
-                    <div class="chair-back"></div>
-                    <div class="chair-seat">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>
-                    <div class="chair-leg"></div>
-                </div>
-
-                <div class="left-chair">
-                    <div class="chair-back"></div>
-                    <div class="chair-seat">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>
-                <div class="chair-leg"></div>
-                </div>
-
-                <div class="table">
-                    <div class="table-top"></div>
-                    <div class="table-leg"></div>
-                    <div class="table-middle"></div>
-                    <div class="table-base"></div>
-                </div>
-
-                <div class="teapot">
-                    <div class="lid-btn"></div>
-                    <div class="lid"></div>
-                    <div class="body"></div>
-                    <div class="spout"></div>
-                    <div class="handle"></div>
-                </div>
+            <div id="instructions">
+                <p>Перетащите элементы в рамку, поверните их и соберите дом.</p>
             </div>
-        </div>
-    </section>
-  </main>
+            <div id="game-container">
+                <img src="image/1.jpg" id="block1" class="piece" draggable="true" alt="Часть пазла">
+                <img src="image/2.jpg" id="block2" class="piece" draggable="true" alt="Часть пазла">
+                <img src="image/3.jpg" id="block3" class="piece" draggable="true" alt="Часть пазла">
+                <img src="image/4.jpg" id="block4" class="piece" draggable="true" alt="Часть пазла">
+                <div id="target-area">
+                </div>
+                <div id="feedback" style="display: none;"></div>
+            </div>
+        </section>
+
+    </main>
+
 
     <footer class="footer">
         <div class="container">
             <p>© 2025 Якоб Анжела Ивановна</p>
         </div>
     </footer>
+     <script src="js/script.js"></script>
     <script src="../../js/burger.js"></script>
 </body>
 
