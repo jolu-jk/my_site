@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
         type: "fill-in-the-blanks",
         text: "______ — космический объект с хвостом",
-        blanks: 5,
+        blanks: 6,
         letters: ["К", "О", "А", "Е", "Т", "М", "Л"],
         correctLetters: ["К", "О", "М", "Е", "Т", "А"],
     },
@@ -154,12 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
             wordElement.classList.add("correct");
             wordElement.classList.remove("incorrect");
             score += 5;
-            timeLeft += 10;
             gameData.selectedAnswers.push(word); 
         } else {
             wordElement.classList.add("incorrect");
             wordElement.classList.remove("correct");
-            score -= 15;
+            score -= 10;
             timeLeft -= 15;
         }
     
@@ -230,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (filledBlanks.length === allBlanks.length) {
             score += 5;
-            timeLeft += 20;
+            timeLeft += 10;
             scoreValueElement.textContent = score;
             timeLeftElement.textContent = timeLeft;
 
