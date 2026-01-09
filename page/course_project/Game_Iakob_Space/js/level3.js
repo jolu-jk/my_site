@@ -154,11 +154,12 @@ document.addEventListener("DOMContentLoaded", () => {
             wordElement.classList.add("correct");
             wordElement.classList.remove("incorrect");
             score += 5;
+            timeLeft += 10;
             gameData.selectedAnswers.push(word); 
         } else {
             wordElement.classList.add("incorrect");
             wordElement.classList.remove("correct");
-            score -= 10;
+            score -= 15;
             timeLeft -= 15;
         }
     
