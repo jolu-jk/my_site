@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../../assets/logo.png" type="image/x-icon">
+    <title>История Игр</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+         <a href="../../../../index.html" class="logo-mark">
+            <span class="logo-letter a">А</span>
+            <span class="logo-letter ya">Я</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a id="logout-button" href="../index.html">Выход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h1>История Игр</h1>
+            <p>Здесь вы можете посмотреть свои предыдущие результаты и увидеть, как вы прошли каждый уровень!</p>
+        </section>
+
+        <section class="history">
+            <div id="history-container"></div>
+            <div id="grid-answers-container"></div>
+
+            <button id="clear-history">Удалить историю</button>
+            <button id="menu-button" class="action-button" onclick="window.location.href='game.html'">В меню</button>
+        </section>
+    </main>
+    <!-- Модальное окно -->
+    <div id="game-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <table id="game-detail-table">
+                <thead>
+                    <tr>
+                        <th>Вопрос</th>
+                        <th>Ваш ответ</th>
+                        <th>Правильный ответ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Якоб Анжела Ивановна</p>
+    </footer>
+
+    <script src="../js/history.js"></script>
+</body>
+
+</html>

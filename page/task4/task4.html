@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 4. DOM</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="css/task4.css">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container">
+    <div class="logo">
+        <a href="../../index.html" class="logo-mark">
+            <span class="logo-letter a">А</span>
+            <span class="logo-letter ya">Я</span>
+        </a>
+    </div>
+
+   <nav class="burger-menu">
+            <button class="burger-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="menu-items">
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../index.html#about">Обо мне</a></li>
+                <li><a href="../../index.html#tasks">Задания</a></li>
+                <li><a href="../../index.html#project">Курсовая работа</a></li>
+            </ul>
+    </nav>
+    </div>
+    </header>
+
+    
+  <main id="task" style="margin-top: 150px;margin-bottom: 40px; text-align: center;">
+        <h1>Задание 4. DOM</h1>
+        <section class="task-description">
+            <h2>Описание задания</h2>
+            
+            <p>Создайте два класса class1 и class2. В них задайте два разных цвета фона. </p>
+            <p>При каждом четном нажатии выводится фраза класса class1, при нечетном class2.</p>
+            <p>Фразы выводятся в случайном, не повторяющемся порядке. <br /> Когда фразы заканчиваются, то выводится
+                alert c фразой <strong>"Фразы закончились"</strong>.</p>
+            <p>По нажатию на <strong>"Перекрасить"</strong> у всех четных строк изменяется начертание на полужирное.</p>
+            <p>На странице в части content создайте таблицу с заголовочной строкой: латинский язык, русский язык. <br /> 
+                По нажатию на кнопку <strong>"Создать"</strong> создается новая срока. В каждый столбец добавляется фраза на латинском или русском языке. </p>
+        </section>
+
+        <section class="task-implementation">  
+<div id="content">
+    <table>
+        <thead>
+            <tr>
+                <th>Латинский язык</th>
+                <th>Русский язык</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+    <button id="createBtn">Создать</button>
+    <button id="styleBtn">Перекрасить</button>
+</div>
+ </section>
+ </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Якоб Анжела Ивановна</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="../../js/burger.js"></script>
+</body>
+
+</html>

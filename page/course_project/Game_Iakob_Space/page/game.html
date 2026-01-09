@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт Якоб Анжелы</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="../../../../index.html" class="logo-mark">
+            <span class="logo-letter a">А</span>
+            <span class="logo-letter ya">Я</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a id="logout-button" href="../index.html">Выход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class=" welcome">
+            <h1 id="greeting"> </h1>
+            <p>Отправьтесь в захватывающее путешествие по просторам игры «Космос»!</p>
+        </section>
+        <section class="menu">
+            <h1>Выберите уровень</h1>
+            <div class="levels">
+                <button id="level1-button">Уровень 1</button>
+                <button id="level2-button" class="locked">Уровень 2 <span>🔒</span></button>
+                <button id="level3-button" class="locked">Уровень 3 <span>🔒</span></button>
+            </div>
+            <div class="buttons-link">
+                <button id="rating-button" onclick="window.location.href='rating.html'">Рейтинг</button>
+                <button id="rating-button" onclick="window.location.href='history.html'">История</button>
+
+            </div>
+            <button id="unlock-all-button" style="margin-top: 20px;">Разблокировать уровни</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Якоб Анжела Ивановна</p>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>

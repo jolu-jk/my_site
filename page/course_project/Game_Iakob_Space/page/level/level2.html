@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уровень 2 - Сайт Якоб Анжелы</title>
+    <link rel="icon" href="../../../../../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="../../../../index.html" class="logo-mark">
+            <span class="logo-letter a">А</span>
+            <span class="logo-letter ya">Я</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a id="logout-button" href="../../index.html">Выход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="game-level" id="level-2">
+            <h1>Уровень 2:Объекты по их назначению в космосе</h1>
+            <div id="hint" class="hint" style="display: none;"></div>
+            <div id="game-area" class="game-area"></div>
+
+            <p id="timer">Осталось времени: <span id="time-left">60</span> секунд</p>
+            <p id="score">Баллы: <span id="score-value">0</span></p>
+            <div class="buttons">
+                <button id="retry" class="action-button" style="display: none;">Пройти уровень заново</button>
+                <button id="menu-button" class="action-button" onclick="window.location.href='../game.html'">В
+                    меню</button>
+                <button id="next-level" class="action-button" style="display: none;">Перейти к уровню 3</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Якоб Анжела Ивановна</p>
+    </footer>
+
+    <script src="../../js/level2.js"></script>
+</body>
+
+</html>

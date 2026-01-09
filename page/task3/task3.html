@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 3. Flexbox </title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="css/pic.css">
+  <link rel="stylesheet" href="css/task3.css">
+</head>
+<body>
+  <header class="header">
+     <a href="../../index.html" class="logo"></a>
+    <div class="container">
+    <div class="logo">
+        <a href="../../index.html" class="logo-mark">
+            <span class="logo-letter a">А</span>
+            <span class="logo-letter ya">Я</span>
+        </a>
+    </div>
+
+   <nav class="burger-menu">
+            <button class="burger-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="menu-items">
+                <li><a href="../../index.html">Главная</a></li>
+                <li><a href="../../index.html#about">Обо мне</a></li>
+                <li><a href="../../index.html#tasks">Задания</a></li>
+                <li><a href="../../index.html#project">Курсовая работа</a></li>
+            </ul>
+    </nav>
+    </header>
+
+  <main id="content" style="margin-top: 150px;margin-bottom: 40px; text-align: center;">
+    <h1>Задание 3: Flexbox</h1>
+
+    <section class="task-description">
+        <h2>Описание задания</h2>
+        
+        <p>Создать элемент flexbox, который состоит  из заданных изображений и слов,</p> 
+         <p> размером не более <strong>200 px</strong></p> 
+          <p> По наведению мыши и нажатию его состояние и содержимое меняется.</p>   
+        <p><strong>Вариант 3:</strong></p>
+        <img src="image/garage.jpg" alt="Пример рисунка задания" style="max-width: 200px; margin: 20px auto;">
+    </section>
+
+    <section class="task-implementation">
+        <h2>Реализация</h2>
+        <p>Элемент flexbox успешно создан с использованием CSS.</p>
+
+    <div class="result">     
+        <div class="garage-flex">
+        <div class="garage">
+           
+            <img src="image/avto2.png" alt="Первая машина" class="car1">
+            <img src="image/avto3.png" alt="Вторая машина" class="car2">
+            <div class="text1">Автомойка "Чистюля"</div>
+            <div class="text2">Самая быстрая автомойка</div>
+        </div>
+
+  </div>
+        
+    </div>
+
+    </section>
+  </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Якоб Анжела Ивановна</p>
+        </div>
+    </footer>
+    <script src="../../js/burger.js"></script>
+</body>
+
+</html>
