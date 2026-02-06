@@ -1,5 +1,6 @@
 /*чтобы гаражж был по середине*/
 .result {
+  
   display: flex;
   justify-content: center;
   align-items: center;

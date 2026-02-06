@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const usedObjects = [];
 
-    const allQuestions = [
+    let allQuestions = [
         {
             type: "drag-and-drop",
             question: "Распредели объекты по их назначению в космосе",
@@ -47,13 +47,29 @@ document.addEventListener("DOMContentLoaded", () => {
         { type: "text", question: "Как называется аппарат для наблюдения за далёкими космическими объектами?", correctAnswer: "Телескоп" }
     ];
 
-    function shuffle(array) {
-        return array.sort(() => Math.random() - 0.5);
+ 
+function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+
+// Новая функция для чередования типов
+function prepareAlternatingQuestions() {
+    
+    const dragType = allQuestions.filter(q => q.type === "drag-and-drop");
+    const textType = allQuestions.filter(q => q.type === "text");
+    shuffle(dragType);
+    shuffle(textType);
+
+    const sortedList = [];
+    const maxLen = Math.max(dragType.length, textType.length);
+
+    for (let i = 0; i < maxLen; i++) {
+        if (i < dragType.length) sortedList.push(dragType[i]);
+        if (i < textType.length) sortedList.push(textType[i]);
     }
 
-    function getRandomQuestions() {
-        return shuffle(allQuestions).slice(0, 1);
-    }
+    allQuestions = sortedList;
+}
 
     function startTimer() {
     const startTime = Date.now();
@@ -298,7 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
     retryButton.addEventListener("click", () => location.reload());
     nextLevelButton.addEventListener("click", () => window.location.href = "level3.html");
 
-    getRandomQuestions();
+    prepareAlternatingQuestions(); 
     displayQuestion();
     startTimer();
 });
